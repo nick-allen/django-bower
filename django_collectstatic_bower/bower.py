@@ -115,7 +115,7 @@ def bower(*args):
 	cwd = os.getcwd()
 
 	proc = subprocess.Popen(
-		(get_bower_executable_path(),) + args,
+		(get_bower_executable_path(),) + args + ('--allow-root',),
 		cwd=cwd
 	)
 	proc.wait()
